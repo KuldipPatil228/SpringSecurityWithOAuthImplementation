@@ -1,0 +1,24 @@
+---
+# Development Environment Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/dev_database
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: dev_user
+    password: dev_password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: devSecretKey123456789012345678901234567890123456
+  expiration: 28800000 # 8 hours for development
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.example: DEBUG
+
+server:
+  port: 8081

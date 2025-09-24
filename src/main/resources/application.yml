@@ -1,0 +1,22 @@
+# Default configuration (common across all environments)
+spring:
+  application:
+    name: spring.application.name=springSecurityWithSwaggerImplimentation
+
+  profile:
+    active: local
+
+
+# JWT Configuration
+jwt:
+  secret: u8P5aLk2q9fD1h7X3mB0rV6sW4yJ8nZ1Q2tC5eH7fG9=
+
+  expiration: 86400000 # 24 hours in milliseconds
+
+logging:
+  level:
+    org.springframework.security: INFO
+    com.example: INFO
+
+server:
+  port: 8080
