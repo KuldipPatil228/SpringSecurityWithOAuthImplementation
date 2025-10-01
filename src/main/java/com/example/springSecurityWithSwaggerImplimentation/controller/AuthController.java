@@ -11,6 +11,9 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
@@ -80,5 +83,12 @@ public class AuthController {
         // 6️⃣ Return token as JSON
         return ResponseEntity.ok(token);
     }
+
+    @GetMapping("/getUsers")
+    public List<String> getUser(){
+        List<String> list = Arrays.asList("prachi patil", " kuldip patil", "saurasbh patil");
+        return list;
+    }
+
 }
 

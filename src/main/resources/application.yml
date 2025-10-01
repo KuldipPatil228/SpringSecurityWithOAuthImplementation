@@ -1,7 +1,7 @@
 # Default configuration (common across all environments)
 spring:
   application:
-    name: spring.application.name=springSecurityWithSwaggerImplimentation
+    name: "SpringSecurityWithOAuthImplementation"
 
   profile:
     active: local

@@ -16,6 +16,7 @@ public class SwaggerConfig {
 //                        .description("API documentation for JWT-based authentication"));
 //    }
 
+
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()

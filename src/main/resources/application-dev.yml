@@ -11,14 +11,14 @@
       ddl-auto: update
     show-sql: true
 
-jwt:
-  secret: devSecretKey123456789012345678901234567890123456
-  expiration: 28800000 # 8 hours for development
+  jwt:
+    secret: devSecretKey123456789012345678901234567890123456
+    expiration: 28800000 # 8 hours for development
 
-logging:
-  level:
-    org.springframework.security: DEBUG
-    com.example: DEBUG
+  logging:
+    level:
+      org.springframework.security: DEBUG
+      com.example: DEBUG
 
-server:
-  port: 8081
+  server:
+    port: 8081

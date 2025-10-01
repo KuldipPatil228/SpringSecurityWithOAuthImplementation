@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password:
-  h2:
+  h2: 
     console:
       enabled: true
       path: /h2-console
@@ -18,16 +18,30 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - openid
+              - profile
+              - email
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
 
-jwt:
-  secret: u8P5aLk2q9fD1h7X3mB0rV6sW4yJ8nZ1Q2tC5eH7fG9=
+  jwt:
+    secret: ${SECRET_KEY}
+    expiration: 3600000 # 1 hour
 
-  expiration: 3600000 # 1 hour
 
-logging:
-  level:
-    org.springframework.security: DEBUG
-    com.example: DEBUG
+  server:
+    port: 8080
 
-server:
-  port: 8080
+  output:
+    ansi:
+      enabled: always
